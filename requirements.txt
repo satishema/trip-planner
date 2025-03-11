@@ -1,5 +1,3 @@
 python-dotenv
-chromadb
 pysqlite3-binary
 streamlit
-crewai
