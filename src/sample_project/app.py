@@ -1,12 +1,13 @@
+ __import__('pysqlite3')
+ import sys
+ sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import streamlit as st
 import requests
 import os
 from dotenv import load_dotenv
 from crewai import Task, Crew
 from crew import TourPlanningProject
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 # Load environment variables
 load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("GEMINI_API_KEY")
